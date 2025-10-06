@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.Jokenpo;
+package model;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -28,6 +28,7 @@ public class PedraPapelTesoura {
     public void randomizarEscolhaDoComputador(){
         Random numeroAleatorio = new Random();
         escolhaDoComputador = numeroAleatorio.nextInt(3)+1;
+        //o intervalo de escolha é [0,n[, portanto a escolha do computador precisa ser de 0 a 3 (0,1,2) + 1
         formularLogicaDoJogo();
     }
 

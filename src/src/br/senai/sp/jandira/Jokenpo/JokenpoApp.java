@@ -1,6 +1,6 @@
-package model;
+package br.senai.sp.jandira.Jokenpo;
 
-import br.senai.sp.jandira.Jokenpo.PedraPapelTesoura;
+import model.PedraPapelTesoura;
 
 public class JokenpoApp {
     public static void main(String[] args) {
