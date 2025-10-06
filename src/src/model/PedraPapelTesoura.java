@@ -11,7 +11,7 @@ public class PedraPapelTesoura {
     public int respostaDoUsuarioSobreJogarDeNovo;
     Scanner leitor = new Scanner(System.in);
 
-    public void getPedraPapelTesoura(){
+    public void GetPedraPapelTesoura(){
         System.out.println("-----------------------------------");
         System.out.println("Vamos jogar Jokenpô!");
         System.out.println("-----------------------------------");
@@ -22,17 +22,17 @@ public class PedraPapelTesoura {
         System.out.println("-----------------------------------");
         System.out.print("Digite a sua escolha: ");
         escolhaDoUsuario = leitor.nextInt();
-        randomizarEscolhaDoComputador();
+        RandomizarEscolhaDoComputador();
     }
 
-    public void randomizarEscolhaDoComputador(){
+    public void RandomizarEscolhaDoComputador(){
         Random numeroAleatorio = new Random();
         escolhaDoComputador = numeroAleatorio.nextInt(3)+1;
         //o intervalo de escolha é [0,n[, portanto a escolha do computador precisa ser de 0 a 3 (0,1,2) + 1
-        formularLogicaDoJogo();
+        FormularLogicaDoJogo();
     }
 
-    public void formularLogicaDoJogo() {
+    public void FormularLogicaDoJogo() {
         if (escolhaDoUsuario==1 && escolhaDoComputador== 2)
         {
             resultadoDaPartida = "Você perdeu :(";
@@ -55,9 +55,9 @@ public class PedraPapelTesoura {
         else{
             resultadoDaPartida = "Empate!";
         }
-exibirResultado();
+ExibirResultado();
     }
-    public void exibirResultado(){
+    public void ExibirResultado(){
 
         if (escolhaDoUsuario==1) {
             escolhaDoUsuarioEmTexto = "Pedra";
@@ -77,12 +77,12 @@ exibirResultado();
         System.out.println("Você escolheu: " + escolhaDoUsuarioEmTexto);
         System.out.println("O computador escolheu: " + escolhaDoComputadorEmTexto);
         System.out.println(resultadoDaPartida);
-        jogarDeNovo();
+        JogarDeNovo();
     }
-    public void jogarDeNovo(){
+    public void JogarDeNovo(){
         System.out.print("Jogar de novo? (Sim = 1, não = 0) ");
         respostaDoUsuarioSobreJogarDeNovo = leitor.nextInt();
-        if (respostaDoUsuarioSobreJogarDeNovo == 1) getPedraPapelTesoura();
+        if (respostaDoUsuarioSobreJogarDeNovo == 1) GetPedraPapelTesoura();
         else System.exit(0);
     }
 }
