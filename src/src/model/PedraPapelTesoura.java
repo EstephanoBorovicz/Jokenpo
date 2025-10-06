@@ -33,29 +33,22 @@ public class PedraPapelTesoura {
     }
 
     public void FormularLogicaDoJogo() {
-        if (escolhaDoUsuario==1 && escolhaDoComputador== 2)
-        {
+        if (escolhaDoUsuario==1 && escolhaDoComputador== 2){
             resultadoDaPartida = "Você perdeu :(";
-        } else if (escolhaDoUsuario==1 && escolhaDoComputador== 3)
-        {
+        }else if (escolhaDoUsuario==1 && escolhaDoComputador== 3){
             resultadoDaPartida = "*** V O C Ê  V E N C E U ! ! ! ***";
-        }else if(escolhaDoUsuario==2 && escolhaDoComputador==1)
-        {
-            resultadoDaPartida = "V*** V O C Ê  V E N C E U ! ! ! ***";
-        } else if (escolhaDoUsuario==2 && escolhaDoComputador==3)
-        {
-            resultadoDaPartida = "Você perdeu :(";
-        } else if (escolhaDoUsuario==3 && escolhaDoComputador==1)
-        {
-            resultadoDaPartida = "Você perdeu :(";
-        } else if (escolhaDoUsuario==3 && escolhaDoComputador==2)
-        {
+        }else if(escolhaDoUsuario==2 && escolhaDoComputador==1){
             resultadoDaPartida = "*** V O C Ê  V E N C E U ! ! ! ***";
-        }
-        else{
+        }else if (escolhaDoUsuario==2 && escolhaDoComputador==3){
+            resultadoDaPartida = "Você perdeu :(";
+        }else if(escolhaDoUsuario==3 && escolhaDoComputador==1){
+            resultadoDaPartida = "Você perdeu :(";
+        }else if (escolhaDoUsuario==3 && escolhaDoComputador==2){
+            resultadoDaPartida = "*** V O C Ê  V E N C E U ! ! ! ***";
+        }else{
             resultadoDaPartida = "Empate!";
         }
-ExibirResultado();
+    ExibirResultado();
     }
     public void ExibirResultado(){
 
@@ -69,9 +62,9 @@ ExibirResultado();
 
         if (escolhaDoComputador==1) {
             escolhaDoComputadorEmTexto = "Pedra";
-        } else if (escolhaDoComputador==2) {
+        }else if(escolhaDoComputador==2) {
             escolhaDoComputadorEmTexto = "Papel";
-        } else if (escolhaDoComputador==3){
+        }else if(escolhaDoComputador==3){
             escolhaDoComputadorEmTexto = "Tesoura";}
 
         System.out.println("Você escolheu: " + escolhaDoUsuarioEmTexto);
